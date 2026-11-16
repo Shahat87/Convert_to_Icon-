@@ -18,7 +18,7 @@ failed = 0
 for f in sorted(os.listdir(src)):
     name, ext = os.path.splitext(f)
     ext = ext.lower()
-    if ext not in ('.svg', '.webp', '.png'):
+    if ext not in ('.svg', '.webp', '.png', '.icns'):
         continue
 
     src_path = os.path.join(src, f)
@@ -29,7 +29,13 @@ for f in sorted(os.listdir(src)):
             png_data = cairosvg.svg2png(url=src_path, output_width=256, output_height=256)
             img = Image.open(BytesIO(png_data)).convert("RGBA")
         else:
-            img = Image.open(src_path).convert("RGBA")
+            img = Image.open(src_path)
+            if ext == '.icns':
+                # ICNS holds several sizes; load the largest to minimise upscaling
+                w, h, scale = max(img.info['sizes'], key=lambda s: s[0] * s[2])
+                img.size = (w, h)
+                img.load(scale=scale)
+            img = img.convert("RGBA")
 
         img = img.resize((256, 256), Image.LANCZOS)
         icon_sizes = [(16,16), (32,32), (48,48), (64,64), (128,128), (256,256)]

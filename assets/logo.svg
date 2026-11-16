@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#151B3A"/><stop offset="1" stop-color="#0B1020"/></linearGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity=".03"/></linearGradient>
+<radialGradient id="gl"><stop offset="0" stop-color="#4F8CFF" stop-opacity=".55"/><stop offset=".55" stop-color="#7C5CFF" stop-opacity=".16"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22"/></filter>
+<filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8"/></filter>
+<clipPath id="c"><rect x="32" y="32" width="448" height="448" rx="98.5"/></clipPath>
+<radialGradient id="lg" cx=".7" cy=".72" r=".6"><stop offset="0" stop-color="#7C5CFF" stop-opacity=".28"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/></radialGradient></defs>
+<rect x="32" y="32" width="448" height="448" rx="98.56" fill="url(#bg)"/><rect x="32.5" y="32.5" width="447" height="447" rx="98.06" fill="none" stroke="url(#rim)" stroke-width="1"/>
+<g clip-path="url(#c)"><rect x="32" y="32" width="448" height="448" fill="url(#lg)"/></g>
+<g transform="translate(256,256) scale(1.0)"><circle cx="44" cy="44" r="168.0" fill="url(#gl)"/>
+<rect x="-128.0" y="-128.0" width="168" height="168" rx="40.32" fill="url(#acc)" fill-opacity="0.077" stroke="url(#acc)" stroke-opacity="0.47" stroke-width="2.69"/>
+<rect x="-84.0" y="-84.0" width="168" height="168" rx="40.32" fill="url(#acc)" fill-opacity="0.175" stroke="url(#acc)" stroke-opacity="0.75" stroke-width="2.69"/>
+<rect x="-40.0" y="-40.0" width="168" height="168" rx="40.32" fill="url(#acc)"/>
+<rect x="-39.25" y="-39.25" width="166.5" height="166.5" rx="39.57" fill="none" stroke="url(#edge)" stroke-width="2.35"/>
+<rect x="0.3200000000000003" y="0.3200000000000003" width="87.36" height="87.36" rx="18.345599999999997" fill="#0B1020" fill-opacity=".16"/>
+<rect x="23.9072" y="23.9072" width="40.1856" height="40.1856" rx="8.736" fill="#fff" fill-opacity=".92"/></g>
+</svg>
